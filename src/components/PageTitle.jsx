@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PageTitle = () => {
+const PageTitle = ({ children }) => {
   return (
-    <p>
-       Todo List
+    <p className="text-3xl font-bold text-gray-800">
+      {children}
     </p>
   )
 }

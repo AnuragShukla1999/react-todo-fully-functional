@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import TodoModal from './TodoModal';
 import Button, { SelectButton } from './Button';
 
+import { updateFilterStatus } from '../Redux/slices/todoSlice.js'
+
+
 const AppHeader = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -20,10 +23,17 @@ const AppHeader = () => {
 
   return (
     <div className="flex justify-between items-center w-full py-4 px-8">
-      <Button variant="primary" onClick={() => setModalOpen(true)}>
+      <Button 
+        variant="primary" 
+        onClick={() => setModalOpen(true)}
+      >
         Add Task
       </Button>
-      <SelectButton id="status" onChange={(e) => updateFilter(e)} value={filterStatus}>
+      <SelectButton 
+        id="status" 
+        onChange={(e) => updateFilter(e)} 
+        value={filterStatus}
+      >
         <option value="all">All</option>
         <option value="incomplete">Incomplete</option>
         <option value="complete">Completed</option>

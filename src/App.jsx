@@ -7,21 +7,14 @@ import AppContent from './components/AppContent'
 const App = () => {
   return (
     <>
-        <div className="container">
-          <PageTitle/>
-          <div>
-             <AppHeader/>
-             <AppContent/>
-          </div>
+        <div className="container mx-auto px-4 py-8">
+        <PageTitle>Todo List</PageTitle>
+        <div className="flex flex-col items-center">
+          <AppHeader />
+          <AppContent />
         </div>
-        <Toaster
-          position='bottom-right'
-          toastOptions={{
-             style: {
-              fontSize: '1.4rem',
-             },
-          }}
-        />
+      </div>
+      <Toaster position="bottom-right" />
     </>
   )
 }
